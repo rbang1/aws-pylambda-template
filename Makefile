@@ -1,6 +1,7 @@
 venv: requirements.txt
 	test -L ./bin/python || virtualenv -p python3 .
 	./bin/pip install -r requirements.txt
+	./bin/pip install -r requirements-local.txt
 
 config-%: config-%.yaml
 	cp $@.yaml config.yaml
